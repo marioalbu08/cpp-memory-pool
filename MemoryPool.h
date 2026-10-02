@@ -1,6 +1,8 @@
 #pragma once
 #include <cstddef>
+struct Block { Block* next; };
 class MemoryPool {
+    Block* freeList;
 public:
     MemoryPool(size_t size);
     ~MemoryPool();
