@@ -1,8 +1,10 @@
 #pragma once
 #include <cstddef>
+#include <mutex>
 struct Block { Block* next; };
 class MemoryPool {
     Block* freeList;
+    std::mutex mtx;
 public:
     MemoryPool(size_t size);
     ~MemoryPool();
