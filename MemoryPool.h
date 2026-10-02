@@ -1,4 +1,5 @@
 #pragma once
+// High-performance thread-safe memory pool allocator
 #include <cstddef>
 #include <mutex>
 struct Block { Block* next; };
